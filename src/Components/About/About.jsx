@@ -3,6 +3,7 @@ import AboutCSS from './About.module.css';
 import paulq from '../../public/paulq.jpg';
 
 function About() {
+  AOS.init();
   return (
     <>
       <section id="about">

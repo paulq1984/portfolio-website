@@ -2,17 +2,33 @@ import React from 'react';
 import ServiceCSS from './Services.module.css';
 
 function Services() {
+  AOS.init();
   return (
     <>
       <section id="services">
         <div className={ServiceCSS.service}>
-          <h2>Things I Can Do!</h2>
-          <p>
+          <h2
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="100"
+          >
+            Things I Can Do!
+          </h2>
+          <p
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Odio fugiat nam sequi!
           </p>
           <div className={ServiceCSS.service_cards}>
-            <div className={ServiceCSS.service_card}>
+            <div
+              className={ServiceCSS.service_card}
+              data-aos="fade-right"
+              data-aos-duration="1500"
+              data-aos-delay="100"
+            >
               <i
                 className="fa-solid fa-arrow-right-long"
                 id={ServiceCSS.icon}
@@ -27,7 +43,12 @@ function Services() {
                 <i className="fa-solid fa-arrow-right-long"></i>
               </a>
             </div>
-            <div className={ServiceCSS.service_card}>
+            <div
+              className={ServiceCSS.service_card}
+              data-aos="fade"
+              data-aos-duration="1500"
+              data-aos-delay="500"
+            >
               <i
                 className="fa-solid fa-arrow-right-long"
                 id={ServiceCSS.icon}
@@ -42,7 +63,12 @@ function Services() {
                 <i className="fa-solid fa-arrow-right-long"></i>
               </a>
             </div>
-            <div className={ServiceCSS.service_card}>
+            <div
+              className={ServiceCSS.service_card}
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-delay="1000"
+            >
               <i
                 className="fa-solid fa-arrow-right-long"
                 id={ServiceCSS.icon}

@@ -28,7 +28,7 @@ function Nav() {
           </div>
           <div className={NavCSS.nav} style={navbar}>
             <a
-              href="#"
+              href="#home"
               data-aos="fade-down"
               data-aos-duration="1500"
               data-aos-delay="200"
@@ -36,7 +36,7 @@ function Nav() {
               Home
             </a>
             <a
-              href="#"
+              href="#about"
               data-aos="fade-down"
               data-aos-duration="1500"
               data-aos-delay="300"
@@ -44,7 +44,7 @@ function Nav() {
               About Me
             </a>
             <a
-              href="#"
+              href="#services"
               data-aos="fade-down"
               data-aos-duration="1500"
               data-aos-delay="400"
@@ -52,7 +52,7 @@ function Nav() {
               Things I can Do
             </a>
             <a
-              href="#"
+              href="#contact"
               data-aos="fade-down"
               data-aos-duration="1500"
               data-aos-delay="500"
