@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import NavCSS from './Nav.module.css';
 
 function Nav() {
-  let [navbar, setnavbar] = useState({ height: 0, padding: 0 });
+  AOS.init();
+  const [navbar, setnavbar] = useState({ height: 0, padding: 0 });
 
   const activeNav = () => {
     if (navbar.height == 0) {
-      return setnavbar({ height: '250px', padding: '20px' });
+      setnavbar({ height: '350px', padding: '20px 8%' });
     } else {
       setnavbar({ height: 0, padding: 0 });
     }
   };
+
   return (
     <>
       <section>
@@ -20,7 +22,7 @@ function Nav() {
               Paul <span>Quinnell</span>
             </h2>
           </div>
-          <div className={NavCSS.nav}>
+          <div className={NavCSS.nav} style={navbar}>
             <a href="#">Home</a>
             <a href="#">About Me</a>
             <a href="#">Things I can Do</a>
