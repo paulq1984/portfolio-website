@@ -1,8 +1,69 @@
-import React from 'react';
+import { useState } from 'react';
 import ContactCSS from './Contact.module.css';
+import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   AOS.init();
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const [disabled, setDisabled] = useState(false);
+  const [alertInfo, setAlertInfo] = useState({
+    display: false,
+    message: '',
+    type: '',
+  });
+
+  // Shows alert message for form submission feedback
+  const toggleAlert = (message, type) => {
+    setAlertInfo({ display: true, message, type });
+
+    // Hide alert after 5 seconds
+    setTimeout(() => {
+      setAlertInfo({ display: false, message: '', type: '' });
+    }, 5000);
+  };
+
+  // Function called on submit that uses emailjs to send email of valid contact form
+  const onSubmit = async (data) => {
+    // Destrcture data object
+    const { name, email, subject, message } = data;
+    try {
+      // Disable form while processing submission
+      setDisabled(true);
+
+      const templateParams = {
+        name,
+        email,
+        message,
+      };
+
+      await emailjs.send(
+        'service_id2ept8',
+        'template_vtlib0f',
+        templateParams,
+        '39dCOoKaXowG7HJtX'
+      );
+
+      // Display success alert
+      toggleAlert('Form submission was successful!', 'success');
+    } catch (e) {
+      console.error(e);
+      // Display error alert
+      toggleAlert('Uh oh. Something went wrong.', 'danger');
+    } finally {
+      // Re-enable form submission
+      setDisabled(false);
+      // Reset contact form fields after submission
+      reset();
+    }
+  };
+
   return (
     <>
       <section id="contact">
@@ -20,39 +81,95 @@ function Contact() {
               data-aos-duration="1500"
               data-aos-delay="800"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aperiam nemo similique consectetur.
+              Interested in working with me, get in touch.....
             </p>
           </div>
           <form
             data-aos="fade-left"
             data-aos-duration="1500"
             data-aos-delay="1000"
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
           >
             <label>Name:</label>
             <input
               type="text"
               placeholder="Enter Name *"
               id="name"
-              required
+              name="name"
+              {...register('name', {
+                required: {
+                  value: true,
+                  message: 'Please enter your name',
+                },
+                maxLength: {
+                  value: 30,
+                  message: 'Please use 30 characters or less',
+                },
+              })}
             />
+            {errors.name && (
+              <span className="errorMessage">
+                {errors.name.message}
+              </span>
+            )}
             <label>Email:</label>
             <input
               type="email"
               placeholder="Enter Email *"
               id="email"
-              required
+              name="email"
+              {...register('email', {
+                required: true,
+                pattern:
+                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              })}
             />
-            <label>Phone:</label>
-            <input
-              type="text"
-              placeholder="Enter Phone *"
-              id="phone"
+            {errors.email && (
+              <span className="errorMessage">
+                Please enter a valid email address
+              </span>
+            )}
+            <label>Message:</label>
+            <textarea
+              rows={3}
+              name="message"
+              {...register('message', {
+                required: true,
+              })}
+              placeholder="Enter Message *"
+              id="message"
               required
-            />
-            <button>Contact Me!</button>
+            ></textarea>
+            {errors.message && (
+              <span className="errorMessage">
+                Please enter a message
+              </span>
+            )}
+            <button type="submit">Contact Me!</button>
           </form>
         </div>
+        {alertInfo.display && (
+          <div
+            className={`alert alert-${alertInfo.type} alert-dismissible mt-5`}
+            role="alert"
+          >
+            {alertInfo.message}
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+              onClick={() =>
+                setAlertInfo({
+                  display: false,
+                  message: '',
+                  type: '',
+                })
+              } // Clear the alert when close button is clicked
+            ></button>
+          </div>
+        )}
       </section>
     </>
   );

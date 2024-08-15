@@ -19,8 +19,7 @@ function Services() {
             data-aos-duration="1500"
             data-aos-delay="500"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Odio fugiat nam sequi!
+            I have a very particular set of skills!
           </p>
           <div className={ServiceCSS.service_cards}>
             <div
@@ -30,18 +29,18 @@ function Services() {
               data-aos-delay="100"
             >
               <i
-                className="fa-solid fa-arrow-right-long"
+                className="fa-solid fa-laptop"
                 id={ServiceCSS.icon}
               ></i>
-              <h3>Web Design</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Magnam id debitis nam quaerat libero voluptatem!
-              </p>
-              <a href="#">
-                Read More
-                <i className="fa-solid fa-arrow-right-long"></i>
-              </a>
+              <h3>Web Developer</h3>
+              <ul>
+                <li>HTML</li>
+                <li>Advanced CSS/SASS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Angular</li>
+                <li>API Use</li>
+              </ul>
             </div>
             <div
               className={ServiceCSS.service_card}
@@ -50,18 +49,20 @@ function Services() {
               data-aos-delay="500"
             >
               <i
-                className="fa-solid fa-arrow-right-long"
+                className="fa-solid fa-mobile"
                 id={ServiceCSS.icon}
               ></i>
-              <h3>Mobile Development</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Magnam id debitis nam quaerat libero voluptatem!
-              </p>
-              <a href="#">
-                Read More
-                <i className="fa-solid fa-arrow-right-long"></i>
-              </a>
+              <h3>Mobile Developer</h3>
+              <p>SwiftUI, UIKIt, AppClips</p>
+              <ul>
+                <li>SwiftUI</li>
+                <li>Swift</li>
+                <li>UIKit</li>
+                <li>Apple Frameworks</li>
+                <li>App Store/Google Play Store Deployment</li>
+                <li>Kotlin</li>
+                <li>React Native</li>
+              </ul>
             </div>
             <div
               className={ServiceCSS.service_card}
@@ -70,18 +71,19 @@ function Services() {
               data-aos-delay="1000"
             >
               <i
-                className="fa-solid fa-arrow-right-long"
+                className="fa-solid fa-database"
                 id={ServiceCSS.icon}
               ></i>
-              <h3>BackEnd Developer</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Magnam id debitis nam quaerat libero voluptatem!
-              </p>
-              <a href="#">
-                Read More
-                <i className="fa-solid fa-arrow-right-long"></i>
-              </a>
+              <h3>Backend Developer</h3>
+              <ul>
+                <li>AWS</li>
+                <li>Firebase</li>
+                <li>Amplify</li>
+                <li>Rest APIs</li>
+                <li>Websockets</li>
+                <li>MongoDB</li>
+                <li>ExpressJS, NodeJS</li>
+              </ul>
             </div>
           </div>
         </div>

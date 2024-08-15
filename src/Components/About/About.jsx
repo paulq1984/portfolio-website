@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutCSS from './About.module.css';
 import paulq from '../../public/paulq.jpg';
+import resume from '../../public/PQ_Resume.pdf';
 
 function About() {
   AOS.init();
@@ -44,16 +45,28 @@ function About() {
               data-aos-duration="1500"
               data-aos-delay="1000"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Id praesentium quo nihil!
+              Results-oriented Developer with 6+ years of experience
+              seeking a collaborative team environment that values
+              innovation and continuous improvement. Proven ability to
+              mentor junior developers while actively seeking
+              opportunities for personal growth and skill development.
+              Adept at leading projects, leveraging a passion for
+              technology to drive successful outcomes.
             </p>
-            <button
-              data-aos="fade-left"
-              data-aos-duration="1500"
-              data-aos-delay="1200"
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
             >
-              Download Resume
-            </button>
+              <button
+                data-aos="fade-left"
+                data-aos-duration="1500"
+                data-aos-delay="1200"
+              >
+                Download Resume
+              </button>
+            </a>
           </div>
         </div>
       </section>
