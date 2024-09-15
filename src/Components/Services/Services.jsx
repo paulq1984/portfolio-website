@@ -2,7 +2,6 @@ import React from 'react';
 import ServiceCSS from './Services.module.css';
 
 function Services() {
-  AOS.init();
   return (
     <>
       <section id="services">

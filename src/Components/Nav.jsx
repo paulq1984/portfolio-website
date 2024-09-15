@@ -6,7 +6,7 @@ function Nav() {
 
   const activeNav = () => {
     if (navbar.height == 0) {
-      setnavbar({ height: '275px', padding: '20px 8%' });
+      setnavbar({ height: '375px', padding: '20px 8%' });
     } else {
       setnavbar({ height: 0, padding: 0 });
     }
@@ -32,12 +32,15 @@ function Nav() {
             <a
               href="#about"
             >
-              About Me
+              Things About Me
             </a>
             <a
               href="#services"
             >
               Things I can Do
+            </a>
+            <a href="#projects">
+            Things I've Done
             </a>
             <a
               href="#contact"
