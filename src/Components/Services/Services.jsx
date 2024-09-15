@@ -18,55 +18,37 @@ function Services() {
             <div
               className={ServiceCSS.service_card}
             >
-              <i
-                className="fa-solid fa-laptop"
-                id={ServiceCSS.icon}
-              ></i>
-              <h3>Web Developer</h3>
+              <h3>Programming</h3>
               <ul>
-                <li>HTML</li>
-                <li>Advanced CSS/SASS</li>
+                <li>SwiftUI / Swift</li>
                 <li>JavaScript</li>
-                <li>React</li>
-                <li>Angular</li>
-                <li>API Use</li>
-              </ul>
-            </div>
-            <div
-              className={ServiceCSS.service_card}
-            >
-              <i
-                className="fa-solid fa-mobile"
-                id={ServiceCSS.icon}
-              ></i>
-              <h3>Mobile Developer</h3>
-              <p>SwiftUI, UIKIt, AppClips</p>
-              <ul>
-                <li>SwiftUI</li>
-                <li>Swift</li>
-                <li>UIKit</li>
-                <li>Apple Frameworks</li>
-                <li>App Store/Google Play Store Deployment</li>
+                <li>HTML</li>
+                <li>CSS</li>
                 <li>Kotlin</li>
-                <li>React Native</li>
               </ul>
             </div>
             <div
               className={ServiceCSS.service_card}
             >
-              <i
-                className="fa-solid fa-database"
-                id={ServiceCSS.icon}
-              ></i>
-              <h3>Backend Developer</h3>
+              <h3>Technologies</h3>
               <ul>
-                <li>AWS</li>
-                <li>Firebase</li>
-                <li>Amplify</li>
-                <li>Rest APIs</li>
-                <li>Websockets</li>
+                <li>React & React Native</li>
+                <li>Angular</li>
+                <li>Node</li>
+                <li>AWS/Firebase</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+            <div
+              className={ServiceCSS.service_card}
+            >
+              <h3>Tools</h3>
+              <ul>
+                <li>Xcode & Android Studio</li>
+                <li>VS Code</li>
                 <li>MongoDB</li>
-                <li>ExpressJS, NodeJS</li>
+                <li>Websockets & Restful APIS</li>
+                <li>Expo</li>
               </ul>
             </div>
           </div>

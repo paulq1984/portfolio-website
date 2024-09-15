@@ -29,13 +29,7 @@ function About() {
             </h3>
             <p
             >
-              Results-oriented Developer with 6+ years of experience
-              seeking a collaborative team environment that values
-              innovation and continuous improvement. Proven ability to
-              mentor junior developers while actively seeking
-              opportunities for personal growth and skill development.
-              Adept at leading projects, leveraging a passion for
-              technology to drive successful outcomes.
+              I’m a passionate developer with 6+ years of experience in developing mobile applicaMons, mobile-first web projects and web sites. I enjoy programming challenges and solving complex problems. I’m a clear and concise communicator with a strong belief in celebraMng team successes and achievements. The opportunity to contribute and collaborate with a diverse and inclusive team is important to me as an individual. I believe in joining a team where diversity is valued and the chance to collaborate with likewise passionate colleagues from various backgrounds is important.
             </p>
             <a
               href={resume}

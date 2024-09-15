@@ -11,7 +11,9 @@ function Footer() {
             <div>
               <p>Lorem ipsum dolor sit amet.</p>
               <div className={FooterCSS.social}>
-                <i className="fa-brands fa-linkedin-in"></i>
+                <i className="fa-brands fa-linkedin-in">
+                  <a href=""></a>
+                </i>
                 <i className="fa-brands fa-linkedin-in"></i>
                 <i className="fa-brands fa-linkedin-in"></i>
                 <i className="fa-brands fa-linkedin-in"></i>
