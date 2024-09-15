@@ -8,25 +8,16 @@ function Services() {
       <section id="services">
         <div className={ServiceCSS.service}>
           <h2
-            data-aos="fade-right"
-            data-aos-duration="1500"
-            data-aos-delay="100"
           >
             Things I Can Do!
           </h2>
           <p
-            data-aos="fade-right"
-            data-aos-duration="1500"
-            data-aos-delay="500"
           >
             I have a very particular set of skills!
           </p>
           <div className={ServiceCSS.service_cards}>
             <div
               className={ServiceCSS.service_card}
-              data-aos="fade-right"
-              data-aos-duration="1500"
-              data-aos-delay="100"
             >
               <i
                 className="fa-solid fa-laptop"
@@ -44,9 +35,6 @@ function Services() {
             </div>
             <div
               className={ServiceCSS.service_card}
-              data-aos="fade"
-              data-aos-duration="1500"
-              data-aos-delay="500"
             >
               <i
                 className="fa-solid fa-mobile"
@@ -66,9 +54,6 @@ function Services() {
             </div>
             <div
               className={ServiceCSS.service_card}
-              data-aos="fade-left"
-              data-aos-duration="1500"
-              data-aos-delay="1000"
             >
               <i
                 className="fa-solid fa-database"

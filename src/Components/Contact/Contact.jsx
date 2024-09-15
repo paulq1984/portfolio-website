@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 
 function Contact() {
-  AOS.init();
 
   const {
     register,
@@ -70,24 +69,15 @@ function Contact() {
         <div className={ContactCSS.contact}>
           <div>
             <h2
-              data-aos="fade-right"
-              data-aos-duration="1500"
-              data-aos-delay="100"
             >
               Contact Me
             </h2>
             <p
-              data-aos="fade-right"
-              data-aos-duration="1500"
-              data-aos-delay="800"
             >
               Interested in working with me, get in touch.....
             </p>
           </div>
           <form
-            data-aos="fade-left"
-            data-aos-duration="1500"
-            data-aos-delay="1000"
             onSubmit={handleSubmit(onSubmit)}
             noValidate
           >
