@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutCSS from './About.module.css';
 import paulq from '../../public/paulq.jpg';
-import resume from '../../public/PQ_Resume.pdf';
+import resume from '../../public/Paul_Quinnell_Resume.pdf';
 
 function About() {
   return (
@@ -25,7 +25,7 @@ function About() {
             </h2>
             <h3
             >
-              Hi I am <span>Developer</span>
+              Hi, I'm <span>Developer</span>
             </h3>
             <p
             >
